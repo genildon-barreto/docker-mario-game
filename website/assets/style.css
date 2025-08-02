@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.game-board{
+  width: 80%;
+  height: 500px;
+  border: 1px solid #333;
+  border-bottom: 15px solid rgb(35, 177, 6);
+  margin: 3% auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(cyan, rgb(91, 250, 250), white);
+}
+
+.placar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  z-index: 10;
+}
+
+.painel-inicial, .painel-pause {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 20;
+}
+
+.painel-inicial button, .painel-pause button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.painel-controle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 20;
+}
+
+.painel-controle button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.titulo-controle {
+    margin-bottom: 15px;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.nuvens{
+  position: absolute;
+  width: 450px;
+  top: 20px;
+  /* Animação inicialmente pausada */
+  animation:  animacao-nuvens 12s infinite linear paused; 
+}
+.tubo{
+  position: absolute;
+  bottom: 0px;
+  width: 60px;
+  /* Animação inicialmente pausada */
+  animation: animacao-tubo 2s infinite linear paused; 
+}
+.mario{
+  width: 150px;
+  position: absolute;
+  bottom: 0px;
+}
+.pulo{
+  animation: pulo 800ms ease-out;
+}
+.pausado{
+  animation-play-state: paused !important;
+}
+
+@keyframes animacao-nuvens{
+  from{
+    right: -450px;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes animacao-tubo{
+  from{
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes pulo{
+  0%{
+    bottom: 0px;
+  }
+  20%{
+  bottom: 160px;
+  }
+  40%{
+    bottom: 160px;
+  }
+  50%{
+    bottom: 160px;
+  }
+  60%{
+    bottom: 160px;
+  }
+  70%{
+    bottom: 90px;
+  }
+  100%{
+    bottom: 0px;
+  }
+}

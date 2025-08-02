@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Jogo Mário</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/script.js" defer></script>
+</head>
+<body>
+  <div class="game-board">
+    <div class="placar">Pontos: <span id="pontuacao">0</span></div>
+    <div class="painel-inicial" id="painel-inicial">
+        <h2 class="titulo-painel">Mini Jogo Mário</h2><br>
+        <p class="instrucoes">Pressione **Espaço** ou **Seta para Cima** para pular.</p>
+        <p class="instrucoes">Pressione **P** para pausar/retomar.</p>
+        <p class="instrucoes">Pressione **Espaço** ou **Seta para Cima**  para iniciar ou reiniciar.</p><br>
+        <button id="botao-iniciar">Iniciar Jogo</button>
+    </div>
+    <div class="painel-controle oculto" id="painel-controle">
+        <h2 class="titulo-controle" id="titulo-controle"></h2>
+        <button id="botao-retomar" class="oculto">Retomar</button>
+        <button id="botao-reiniciar">Reiniciar</button>
+    </div>
+    <img src="assets/imgs/clouds.png" class="nuvens">
+    <img src="assets/imgs/mario.gif" class="mario">
+    <img src="assets/imgs/pipe.png" class="tubo">
+  </div>
+</body>
+</html>
